@@ -12,7 +12,7 @@
                 <ControlTemplate TargetType="{x:Type ct:MessagePopUpBox}">
                     <!--별도 Popup이 표시 된 상태에서도 항상 최상위에 표시 되도록 Popup으로 감쌈-->
                     <!--NOTE : Popup컨트롤은 실제 화면 사이즈의 최대 75%이상은 커버할 수 없어서 그 이상 사이즈가 넘어가면 Popup이 짤린다.-->
-                    <!--전체 화면 등에서 사용할 경우 IsBackgroundDisable속성을 true로 설정하고 사용하는 쪽에서 수동으로 Background처리를 해서 뒤 영역이 클릭되지 않도록 처리해야 한다.   [2020. 06. 16 엄태영]-->
+                    <!--전체 화면 등에서 사용할 경우 IsBackgroundDisable속성을 true로 설정하고 사용하는 쪽에서 수동으로 Background처리를 해서 뒤 영역이 클릭되지 않도록 처리해야 한다.-->
                     <Popup x:Name="xMsgPopUp"
                            Visibility="{Binding Path=IsOpen, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BoolToVisConverter}}"
                            Placement="Center"

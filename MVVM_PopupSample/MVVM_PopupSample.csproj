@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\alert-circle.png" />
+    <None Remove="Images\lightbulb-alert.png" />
+    <None Remove="Images\titlebar_btn_close_bl.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\alert-circle.png" />
+    <Resource Include="Images\lightbulb-alert.png" />
+    <Resource Include="Images\titlebar_btn_close_bl.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\Source\MVVM_PopupSample\MVVM_PopupSample\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\Source\MVVM_PopupSample\MVVM_PopupSample\.editorconfig" />
+  </ItemGroup>
+
+</Project>

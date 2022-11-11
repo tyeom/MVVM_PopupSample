@@ -1,0 +1,36 @@
+﻿<Application x:Class="MVVM_PopupSample.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MVVM_PopupSample"
+             xmlns:views="clr-namespace:MVVM_PopupSample.Views"
+             xmlns:dataContext="clr-namespace:MVVM_PopupSample.ViewModels">
+    <Application.Resources>
+        <!--메인 뷰-->
+        <DataTemplate DataType="{x:Type dataContext:MainViewModel}">
+            <views:MainView />
+        </DataTemplate>
+
+        <!--PopUp1 뷰-->
+        <DataTemplate DataType="{x:Type dataContext:PopUp1ViewModel}">
+            <views:PopUp1View />
+        </DataTemplate>
+
+        <!--PopUp2 뷰-->
+        <DataTemplate DataType="{x:Type dataContext:PopUp2ViewModel}">
+            <views:PopUp2View />
+        </DataTemplate>
+
+        <!--Button Style-->
+        <Style x:Key="NormalButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,52 @@
+﻿<Window x:Class="MVVM_PopupSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVM_PopupSample"
+        xmlns:ct="clr-namespace:MVVM_PopupSample.Controls"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="700"
+        Width="800">
+    <Grid>
+        <ContentControl x:Name="xMainContent"
+                            Content="{Binding CurrentDataContext}"
+                            Margin="0, 0, 0, 0"/>
+
+        <!--메세지 팝업창-->
+        <!--확인 메세지-->
+        <ct:MessagePopUpBox x:Name="xMsgBox_OK"
+                            Grid.Row="0"
+                            IsOpen="False"
+                            HAlignment="Center"
+                            VAlignment="Center"
+                            IsBackgroundDisable="False"
+                            MessagePopUpBoxType="Confirm">
+            <TextBlock x:Name="xTxtMsgBox"
+                       FontSize="25"
+                       Text="안녕하세요!!&#10;이 프로젝트는 아주 간단한 wpf MVVM 샘플 입니다."
+                       FontWeight="ExtraBold"
+                       Margin="20, 0, 20, 0"/>
+        </ct:MessagePopUpBox>
+        <!--확인 메세지 END-->
+
+        <!--Yes, No 메세지-->
+        <ct:MessagePopUpBox x:Name="xMsgBox_YesNo"
+                            Grid.Row="0"
+                            IsOpen="False"
+                            HAlignment="Center"
+                            VAlignment="Center"
+                            IsBackgroundDisable="False"
+                            MessagePopUpBoxType="YesNo">
+            <TextBlock x:Name="xTxtMsgBoxYesNo"
+                       FontSize="25"
+                       Text="aaa."
+                       FontWeight="ExtraBold"
+                       Margin="20, 0, 20, 0"/>
+        </ct:MessagePopUpBox>
+        <!--Yes, No 메세지 END-->
+        
+        <!--메세지 팝업창 END-->
+    </Grid>
+</Window>
